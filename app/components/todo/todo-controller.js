@@ -2,21 +2,27 @@ import TodoService from "./todo-service.js";
 
 const _todoService = new TodoService()
 
-function _drawTodos() {
+function drawTodos() {
 	//WHAT IS MY PURPOSE?
+	let todoElem = document.querySelector('#todos')
+	let todo = _todoService.Todo
+	let template = ''
+	todo.forEach(t => template += _todoService.Todo
+	)
 }
 
-function _drawError() {
-	console.error('[TODO ERROR]', _todoService.TodoError)
-	//document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
-}
+// function _drawError() {
+// 	console.error('[TODO ERROR]', _todoService.TodoError)
+// 	//document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
+// }
 
 
 export default class TodoController {
 	constructor() {
-		_todoService.addSubscriber('error', _drawError)
+		_todoService.addSubscriber('todos', drawTodos)
 		_todoService.getTodos()
 		// Don't forget to add your subscriber
+		console.log("todo controller")
 	}
 
 	addTodo(e) {
