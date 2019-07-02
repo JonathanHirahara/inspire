@@ -9,19 +9,6 @@ function drawImage() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default class ImageController {
   constructor() {
     _imageService.addSubscriber("image", drawImage)

@@ -15,18 +15,6 @@ function setState(propName, data) {
 	_subscribers[propName].forEach(fn => fn())
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 export default class ImageService {
 	constructor() {
 

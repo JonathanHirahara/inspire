@@ -12,24 +12,23 @@
 </head>
 
 <body id="bg-image">
-	<!-- <div id="bg-image"> -->
-
+	<div class="container-fluid">
+		<!-- <div id="bg-image"> -->
+		<div id="weather" class="row  d-flex justify-content-center   ">
+		</div>
+		<div id="quote" class="row">
+		</div>
+		<div>
+			<h3>To-Do-List (<span id="todo-count"></span>)</h3>
+			<div id="todo" class="row"></div>
+			<form onsubmit="app.controllers.todoController.addTodo(event)">
+				<label for="text">New Todo</label>
+				<input type="text" name="description" placeholder="">
+				<button type="submit" class="btn btn-success">Add Task</button>
+			</form>
+			<div id="todos"></div>
+		</div>
 	</div>
-	<div id="weather">
-		Your Weather Template
-	</div>
-
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>

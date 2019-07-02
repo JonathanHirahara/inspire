@@ -9,4 +9,16 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
   }
+  get Template() {
+    let kelvins = this.kelvin
+    let fahrenheit = 1.8 * (kelvins - 273) + 32
+    return `
+    	<div class="card" style="width: 10rem; text-white">
+				<div class="card-body d-flex justify-content-center">
+					<h1 class="card-title"><b>${Math.round(fahrenheit)}</b></h1>
+				<h6><b>${this.city}</b></h6>
+				</div>
+			</div>
+    `
+  }
 }
