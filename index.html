@@ -14,19 +14,18 @@
 <body id="bg-image">
 	<div class="container-fluid">
 		<!-- <div id="bg-image"> -->
-		<div id="weather" class="row  d-flex justify-content-center   ">
-		</div>
-		<div id="quote" class="row">
+		<div id="weather" class="row  d-flex justify-content-center text-white  ">
 		</div>
 		<div>
 			<h3>To-Do-List (<span id="todo-count"></span>)</h3>
 			<div id="todo" class="row"></div>
 			<form onsubmit="app.controllers.todoController.addTodo(event)">
-				<label for="text">New Todo</label>
-				<input type="text" name="description" placeholder="">
-				<button type="submit" class="btn btn-success">Add Task</button>
+				<input type="text" name="description" placeholder="Add To-Do">
+				<button type="submit" class="btn btn-danger">Add</button>
 			</form>
 			<div id="todos"></div>
+		</div>
+		<div id="quote" class="row d-flex text-white sticky bottom">
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>

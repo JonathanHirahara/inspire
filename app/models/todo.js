@@ -8,14 +8,14 @@ export default class Todo {
   get Template() {
     if (this.completed == false) {
       return `
-    <div class="row text-center">
-       <div class="col-4 d-flex border border-dark">
+    <div class="row text-center text-white">
+       <div class="col-4 d-flex">
           <div class="card">
-             <div class="card-body">
+             <div class="">
     
     <li>${this.description}</li>
   
-    <button class="btn btn-sm btn-primary" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">Completed?</button>
+    <button class="btn btn-sm btn-primary " onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">Done?</button>
 </div>
    </div>
       </div>
@@ -23,14 +23,14 @@ export default class Todo {
     `
     } else {
       return `
-     <div class="row text-center">
-    <div class="col-3  d-flex border border-dark">
+     <div class="row text-center text-white">
+    <div class="col-3  d-flex ">
     <div class="card">
-     <div class="card-body">
+     <div class="">
   
     <li>${this.description}</li>
   
-<button class="btn btn-sm btn-primary" onclick="app.controllers.todoController.removeTodo('${this._id}')">Delete</button>
+<button class="btn btn-sm btn-success" onclick="app.controllers.todoController.removeTodo('${this._id}')">Delete</button>
 </div>
 </div>
 </div>

@@ -5,8 +5,8 @@ export default class Quote {
   }
   get Template() {
     return `
-   <div class="card">
-     <div class="card-body">
+   <div class="col-12 d-flex justify-content-center align-items-center">
+     <div class="">
          <blockquote class="blockquote mb-1">
             <p>"${this.text}"</p>
           <footer clas="blockquote-footer"><cite title="Source Title">${this.author}</cite></footer>

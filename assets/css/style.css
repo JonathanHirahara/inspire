@@ -1,11 +1,19 @@
 #bg-image{
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 .card{
 
-  background-color: rgba(15, 15, 15, 0.3);
+  background-color: rgba(15, 15, 15, 0.6);
   
+}
+#quote{
+/* background-color: rgba(15, 15, 15, 1); */
+background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/f200487534919.560ad19bbba79.jpg);
+position: absolute;
+bottom: 0;
+width: 100vw;
+height: 20vh;
 }
